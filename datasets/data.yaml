@@ -1,0 +1,6 @@
+train: C:/Users/legen/ai-parking-ev-optimizer/datasets/train
+val: C:/Users/legen/ai-parking-ev-optimizer/datasets/valid  # keep as valid if you don't rename
+test: C:/Users/legen/ai-parking-ev-optimizer/datasets/test
+
+nc: 2
+names: ["empty_slot", "occupied_slot"]

@@ -1,0 +1,1 @@
+pip install streamlit streamlit-folium folium ultralytics opencv-python geopy scikit-learn pandas matplotlib requests
