@@ -1,1 +1,22 @@
-.venv/ 
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore environment files and secrets
+.env
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore large data or model files
+*.pkl
+*.h5
+*.pt
+*.pth
+*.dll
+*.pyd
