@@ -3,7 +3,11 @@ from streamlit_folium import st_folium
 import folium
 
 # -------------------- PAGE CONFIG --------------------
-st.set_page_config(page_title="AI Parking & EV Assistant", layout="wide")
+st.set_page_config(
+    page_title="AI Parking & EV Assistant",
+    page_icon="🚗",
+    layout="wide"
+)
 
 # -------------------- CUSTOM CSS --------------------
 st.markdown("""
@@ -55,32 +59,18 @@ st.markdown("""
 st.markdown('<div class="main-title">🚗 AI Parking & EV Assistant</div>', unsafe_allow_html=True)
 st.markdown('<div class="tagline">Smart Parking & EV Charging Recommendations Powered by AI ⚡</div>', unsafe_allow_html=True)
 
-# -------------------- BUTTONS --------------------
-st.markdown('<div class="center-buttons">', unsafe_allow_html=True)
-col1, col2, col3 = st.columns([1, 1, 1])
+# -------------------- INFO SECTION --------------------
+st.info("Use the sidebar on the left to navigate between pages: **Detect Parking**, **Charging Stations**, and **Live Camera View.**")
 
-with col1:
-    if st.button("🔍 Detect Parking Spots"):
-        st.switch_page("pages/detect_parking.py")
-
-with col2:
-    if st.button("⚡ Find Charging Stations"):
-        st.switch_page("pages/charging_stations.py")
-
-with col3:
-    if st.button("🎥 Live Camera View"):
-        st.switch_page("pages/live_camera.py")  # optional, if you later add camera page
-
-st.markdown('</div>', unsafe_allow_html=True)
 st.markdown("<hr>", unsafe_allow_html=True)
 
-# -------------------- LARGE MAP SECTION --------------------
+# -------------------- MAP SECTION --------------------
 st.markdown("### 🌍 Explore Nearby Parking & Charging Zones")
 
-# Create a large map with Thane as default location
+# Create a large map centered on Thane
 m = folium.Map(location=[19.2183, 72.9781], zoom_start=12, control_scale=True)
 
-# Example markers (you can add dynamically later)
+# Example markers (demo)
 folium.Marker(
     [19.2183, 72.9781],
     popup="Thane Parking Area 🅿️",

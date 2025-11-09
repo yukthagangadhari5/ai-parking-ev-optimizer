@@ -2,7 +2,6 @@ import streamlit as st
 import folium
 import requests
 from streamlit_folium import st_folium
-from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
 st.set_page_config(page_title="EV Charging Stations", page_icon="⚡", layout="wide")
